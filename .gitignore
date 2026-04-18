@@ -1,0 +1,79 @@
+# =========================
+# Build Directories
+# =========================
+# Ignore the standard CMake build folders
+build/
+out/
+bin/
+obj/
+
+# =========================
+# CMake Artifacts
+# =========================
+# If you accidentally run CMake in the root directory instead of /build
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# =========================
+# Compiled Binaries & Libs
+# =========================
+# Windows
+*.exe
+*.dll
+*.lib
+*.exp
+*.pdb
+*.obj
+*.ilk
+
+# macOS / Linux
+*.app
+*.o
+*.a
+*.so
+*.dylib
+*.out
+
+# =========================
+# IDE & Editor Files
+# =========================
+# Visual Studio
+.vs/
+*.sln
+*.suo
+*.user
+*.vcxproj
+*.vcxproj.filters
+
+# Visual Studio Code
+.vscode/
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# Xcode (macOS)
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+
+# =========================
+# OS-Specific Junk
+# =========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
