@@ -37,6 +37,15 @@ if(APPLE)
   )
 endif()
 
+if(WIN32)
+  target_link_libraries(Engine PUBLIC
+    gdi32
+    user32
+    shell32
+    winmm
+  )
+endif()
+
 target_link_libraries(Engine PUBLIC
   OpenGL::GL
   glfw
