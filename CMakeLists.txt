@@ -15,7 +15,7 @@ elseif(APPLE)
     set(GLFW_LIB_CANDIDATES libglfw3.a)
     set(GLAD_LIB_CANDIDATES libglad.a)
 else()
-    set(GLFW_LIB_CANDIDATES libglfw3.a glfw3.a)
+    set(GLFW_LIB_CANDIDATES libglfw.so.3.3 glfw3.a)
     set(GLAD_LIB_CANDIDATES libglad.a glad.a)
 endif()
 
@@ -56,13 +56,13 @@ message(STATUS "Using GLAD static library: ${GLAD_LIB_PATH}")
 
 find_package(OpenGL REQUIRED)
 
-add_library(glfw STATIC IMPORTED)
+add_library(glfw UNKNOWN IMPORTED)
 set_target_properties(glfw PROPERTIES
     IMPORTED_LOCATION ${GLFW_LIB_PATH}
   INTERFACE_INCLUDE_DIRECTORIES ${LOCAL_INCLUDE_DIR}
 )
 
-add_library(glad STATIC IMPORTED)
+add_library(glad UNKNOWN IMPORTED)
 set_target_properties(glad PROPERTIES
     IMPORTED_LOCATION ${GLAD_LIB_PATH}
   INTERFACE_INCLUDE_DIRECTORIES ${LOCAL_INCLUDE_DIR}
